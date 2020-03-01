@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db92610f8944349718b8341681c303ef
+timeCreated: 1432252049
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - batsu: {fileID: 123474, guid: cb5e76d20988e401e99557b23f1ef4d0, type: 2}
+  - maru: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

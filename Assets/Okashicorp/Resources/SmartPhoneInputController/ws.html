@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Controller</title>
+</head>
+<body style="margin: 0px; padding: 0px;" ontouchmove="event.preventDefault()">
+<div id="pad" style="background-color: gray;"></div>
+
+<script type="text/javascript">
+    const url = "WEBSOCKET_BASE/p1";
+    var pad = document.getElementById("pad");
+    //var W = window.innerWidth, H = window.innerHeight;
+    var W = document.documentElement.clientWidth, H = document.documentElement.clientHeight;
+
+    pad.style.width = W+"px";
+    pad.style.height = H+"px";
+    debug([W,H]);
+
+
+    var controllerState = {
+      x: 0, y: 0,
+      nx: 0, ny: 0, nz: -1
+    };
+
+    var eventName = {
+      mouse: {
+        down: "mousedown",
+        move: "mousemove",
+        up: "mouseup"
+      },
+      touch: {
+        down: "touchstart",
+        move: "touchmove",
+        up: "touchend"
+      }
+    };
+
+    var ifType = "ontouchstart" in window ? "touch" : "mouse";
+    var events = eventName[ifType];
+    var isDown = false;
+    var padHandler = function(e) {
+      if (!e) {
+        controllerState.x = controllerState.y = 0;
+        return;
+      }
+
+      var x, y;
+      if (e.changedTouches && e.changedTouches[0]) {
+        x = e.changedTouches[0].pageX;
+        y = e.changedTouches[0].pageY;
+      } else {
+        x = e.offsetX;
+        y = e.offsetY;
+      }
+
+      controllerState.x = Math.floor(x / W * 100)-50;
+      controllerState.y = Math.floor(y / H * 100)-50;
+    }
+    pad.addEventListener(events.down, function(e) {isDown=true; padHandler(e);});
+    pad.addEventListener(events.move, function(e) {
+      if (isDown) {padHandler(e)}
+    });
+    pad.addEventListener(events.up, function(e) {padHandler(null); isDown = false;});
+
+    window.addEventListener("devicemotion", function(evt){
+      var x = evt.acceleration.x; // X方向の加速度
+      var y = evt.acceleration.y; // Y方向の加速度
+      var z = evt.acceleration.z; // Z方向の加速度
+      var xg = evt.accelerationIncludingGravity.x; // X方向の傾き
+      var yg = evt.accelerationIncludingGravity.y; // Y方向の傾き
+      var zg = evt.accelerationIncludingGravity.z; // Z方向の傾き
+      // 左右への傾き: nx [-1, 1], -1 左に完全に傾いている
+      // 前後への傾き: ny [-1, 1], -1 普通に縦を上に持っている、 1 逆さに持っている
+      // 表が上:  nz = -1, 表が下 nz = 1
+      var xx = (xg-x), yy = (yg-y), zz = (zg-z);
+      var n = Math.sqrt(xx*xx+yy*yy+zz*zz);
+      var nx = xx/n, ny = yy/n, nz = zz/n;
+      // log.innerText =  "("+Math.floor(nx*100)+","+Math.floor(ny*100)+","+Math.floor(nz*100)+")";
+      controllerState.nx = Math.floor(nx*100);
+      controllerState.ny = Math.floor(ny*100);
+      controllerState.nz = Math.floor(nz*100);
+    });
+
+    var ws;
+    wsConnect();
+    function wsConnect() {
+      // FireFoxとの互換性を考慮してインスタンス化
+      if ("WebSocket" in window) {
+          ws = new WebSocket(url);
+      } else if ("MozWebSocket" in window) {
+          ws = new MozWebSocket(url);
+      }
+
+      // メッセージ受信時のコールバック関数
+      ws.onmessage = function(event){
+          debug(event.data);
+      }
+
+      ws.onopen = function() {
+        debug("CONNECTED");
+        send();
+      }
+
+      ws.onclose = function() {
+        console.log("onclose");
+        debug("DISCONNECTED");
+        // setTimeout(wsConnect, 3000);
+      }
+    }
+
+
+    // 終了時に明示的に接続を閉じる
+    window.onunload = function(){
+       var code = 4500;
+       var reason = "client closed";
+       ws.close(code, reason);
+    }
+
+    function debug(text) {
+      pad.innerText = text;
+    }
+
+    function send() {
+      var s = controllerState;
+      var m = [s.x, s.y, s.nx, s.ny, s.nz].join(",");
+      if (ws.readyState == ws.OPEN) {
+        ws.send(m);
+        debug(m);
+        setTimeout(send, 100);
+      }
+    }
+
+</script>
+</body>
+</html>
