@@ -8,7 +8,7 @@ public class GameStart : MonoBehaviour {
 	public void  NextScene(){
 	
 		if (Application.loadedLevelName == "Title") {
-			Application.LoadLevel ("Quiz");
+			Application.LoadLevel ("Q1");
 		
 		}
 	}

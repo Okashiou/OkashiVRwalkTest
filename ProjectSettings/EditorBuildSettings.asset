@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/20200425/Q3.unity
     guid: a572696e09788654699bde0da1a64b71
+  - enabled: 1
+    path: Assets/Scenes/20200425/Q4.unity
+    guid: 2b82dc120f57efd4bbbf667c93ed6ee9
   m_configObjects: {}
