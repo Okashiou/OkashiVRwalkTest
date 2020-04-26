@@ -16,19 +16,45 @@ public class Judge : MonoBehaviour {
     //選択したボタンのテキストラベルと正解のテキストを比較して正誤を判定
     public void JudgeAnswer(Collision collision)
     {
-		//正解のデータをテキストでセットする
-		string answerText = "田園風景";
+        string answerText;
+        //正解のデータをテキストでセットする
+        switch (QuizMgr.count-1)
+        {
+            case 1:
+                answerText = "countryside";
+                break;
+            case 2:
+                answerText = "Edo Period";
+                break;
+            case 3:
+                answerText = "countryside";
+                break;
+            case 4:
+                answerText = "countryside";
+                break;
+            case 5:
+                answerText = "countryside";
+                break;
+            case 6:
+                answerText = "countryside";
+                break;
+            default:
+                answerText = "coguntryside";
+                break;
+        }
+    
+		
 		//選択したボタンのテキストラベルを取得する
-		TextMesh selectedBtn = collision.gameObject.GetComponentInChildren<TextMesh> ();
-
-		if (selectedBtn.text == answerText) {
+		string selectedBtn = collision.gameObject.name;
+		
+		if (selectedBtn == answerText) {
 			//選択したデータをグローバル変数に保存
-			ResultMgr.SetJudgeData ("正解");
-			Application.LoadLevel ("Result");
+			ResultMgr.SetJudgeData ("GREAT");
+			Application.LoadLevel("Q" + QuizMgr.count);
 		} else {
 			//選択したデータをグローバル変数に保存
-			ResultMgr.SetJudgeData ("不正解");
-			Application.LoadLevel ("Result");
+			ResultMgr.SetJudgeData ("BAD");
+			
 		}
 
 	}
