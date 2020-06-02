@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8978,6 +8978,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6223e6426c2b44a88930933f72f5a3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quiz: Q1.What makes you feel nostalgic when you look at it?
+  answers:
+  - countryside
+  - Old shrines and temples
+  - Painting
+  - I do not feel like that
+  next: Q3
 --- !u!4 &1230125269
 Transform:
   m_ObjectHideFlags: 0
