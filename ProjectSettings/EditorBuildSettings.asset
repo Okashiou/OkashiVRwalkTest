@@ -20,16 +20,46 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/20200425/Q4.unity
     guid: 2b82dc120f57efd4bbbf667c93ed6ee9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/20200524/Q1.unity
     guid: 9a68d89e0d4553a4c83d2f4616eea54d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/20200524/Q2.unity
     guid: 43372574028fe324da7377e20f47e1b3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/20200524/Q3.unity
     guid: b07e39c087cab1d49ab3643a1434a4e3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/20200524/Q4.unity
     guid: 36f33e6b603deb74d9807fe15e8b32ba
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q1.unity
+    guid: a241eba918ff6544e8b3e383c2b0d757
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q2.unity
+    guid: 1ebb40ac4d78f254d96062336249dadb
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q3.unity
+    guid: 5c8d5d778ba1e95438a94a40fb6c7f36
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q4.unity
+    guid: aea3a93e93b95204781c4e01bd2e47dc
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q5.unity
+    guid: 58f90ced49919fd49beccadf75bc943d
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q6.unity
+    guid: d9cd542a43e33cd48b244985a25c7c97
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q7.unity
+    guid: d801f1f51ad72b247aed96743a4b4668
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q8.unity
+    guid: cffecdee0ead9a84b9716fa175d5a02b
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q9.unity
+    guid: ab0baf67e3cc2d14fb53237f4a3b923b
+  - enabled: 1
+    path: Assets/Scenes/20200603/Q10.unity
+    guid: 3086a819917697a4db98e1cda10cfe83
   m_configObjects: {}
