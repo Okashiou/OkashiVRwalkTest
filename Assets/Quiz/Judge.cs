@@ -11,6 +11,7 @@ public class Judge : MonoBehaviour {
 
         Debug.Log(collision.gameObject.name); // ログを表示する
         QuizMgr.selected = collision.gameObject.name;
+        LastQuizManager.selected = collision.gameObject.name;
     }
 
     //選択したボタンのテキストラベルと正解のテキストを比較して正誤を判定

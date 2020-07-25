@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.441163, g: 0.48993337, b: 0.5700033, a: 1}
+  m_IndirectSpecularColor: {r: 0.44116285, g: 0.48993295, b: 0.5700026, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -29235,7 +29235,7 @@ Transform:
   - {fileID: 973408112}
   - {fileID: 644581709}
   m_Father: {fileID: 1606237420}
-  m_RootOrder: 121
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &651099038
 PrefabInstance:
@@ -38828,7 +38828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1606237420}
-  m_RootOrder: 123
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &844196486
 PrefabInstance:
@@ -42786,10 +42786,10 @@ Transform:
   - {fileID: 382697021}
   - {fileID: 284531902}
   - {fileID: 1413521789}
-  - {fileID: 1550304963}
-  - {fileID: 1881064516}
   - {fileID: 679829782}
+  - {fileID: 1881064516}
   - {fileID: 1759286099}
+  - {fileID: 1550304963}
   - {fileID: 467778612}
   - {fileID: 1270248495}
   - {fileID: 1269963349}
@@ -55255,7 +55255,7 @@ Transform:
   - {fileID: 1432575637}
   - {fileID: 1045708163}
   m_Father: {fileID: 1606237420}
-  m_RootOrder: 124
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1231513660
 PrefabInstance:
@@ -68323,7 +68323,7 @@ Transform:
   - {fileID: 2008979979}
   - {fileID: 1564902692}
   m_Father: {fileID: 1606237420}
-  m_RootOrder: 122
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1499407267
 PrefabInstance:
@@ -73414,11 +73414,16 @@ Transform:
   - {fileID: 432018432}
   - {fileID: 674197025}
   - {fileID: 72001674}
+  - {fileID: 650831346}
   - {fileID: 197791808}
+  - {fileID: 1497918236}
   - {fileID: 594125560}
   - {fileID: 1828486778}
-  - {fileID: 134721241}
+  - {fileID: 842902522}
+  - {fileID: 1229215512}
   - {fileID: 1382879293}
+  - {fileID: 134721241}
+  - {fileID: 242784663}
   - {fileID: 2014160155}
   - {fileID: 1289661961}
   - {fileID: 1382874803}
@@ -73447,7 +73452,6 @@ Transform:
   - {fileID: 1536887860}
   - {fileID: 929295625}
   - {fileID: 1113126601}
-  - {fileID: 242784663}
   - {fileID: 492066691}
   - {fileID: 70270483}
   - {fileID: 624470680}
@@ -73492,10 +73496,6 @@ Transform:
   - {fileID: 1474494551}
   - {fileID: 1063894218}
   - {fileID: 1582761149}
-  - {fileID: 650831346}
-  - {fileID: 1497918236}
-  - {fileID: 842902522}
-  - {fileID: 1229215512}
   - {fileID: 456466089}
   - {fileID: 1791193499}
   - {fileID: 1055743844}
@@ -95706,7 +95706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1396271283062055
 MonoBehaviour:
   m_ObjectHideFlags: 0

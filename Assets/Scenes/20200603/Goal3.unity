@@ -13985,7 +13985,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106349897}
-  m_RootOrder: 59
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &339965641
 MeshRenderer:
@@ -40592,7 +40592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106349897}
-  m_RootOrder: 48
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1017395785
 MeshRenderer:
@@ -44392,8 +44392,11 @@ Transform:
   - {fileID: 1878335524}
   - {fileID: 935545385}
   - {fileID: 10722020}
-  - {fileID: 887624868}
   - {fileID: 1995981428}
+  - {fileID: 2067878533}
+  - {fileID: 887624868}
+  - {fileID: 1017395784}
+  - {fileID: 339965640}
   - {fileID: 1748500975}
   - {fileID: 279377922}
   - {fileID: 1564219649}
@@ -44428,7 +44431,6 @@ Transform:
   - {fileID: 191696525}
   - {fileID: 961783306}
   - {fileID: 1205508833}
-  - {fileID: 2067878533}
   - {fileID: 92420813}
   - {fileID: 873517981}
   - {fileID: 808049602}
@@ -44436,7 +44438,6 @@ Transform:
   - {fileID: 206027935}
   - {fileID: 1245186709}
   - {fileID: 204947770}
-  - {fileID: 1017395784}
   - {fileID: 432298963}
   - {fileID: 2101097483}
   - {fileID: 1450651225}
@@ -44447,7 +44448,6 @@ Transform:
   - {fileID: 366656849}
   - {fileID: 102278786}
   - {fileID: 549842516}
-  - {fileID: 339965640}
   - {fileID: 872625645}
   - {fileID: 193141321}
   - {fileID: 8708094}
@@ -80694,7 +80694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106349897}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1996723378
 PrefabInstance:
@@ -84034,7 +84034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106349897}
-  m_RootOrder: 40
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2067878534
 MeshRenderer:
@@ -86741,7 +86741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1396271283062055
 MonoBehaviour:
   m_ObjectHideFlags: 0

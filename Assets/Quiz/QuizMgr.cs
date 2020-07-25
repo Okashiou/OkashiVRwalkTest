@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class QuizMgr : MonoBehaviour {
 
+    [Header("プレイヤー位置リセット")]
+    [SerializeField]
+    private GameObject player=null;
+
     static public int count = 1;
     [Header("クイズ")]
     [SerializeField]
@@ -12,7 +16,12 @@ public class QuizMgr : MonoBehaviour {
     [Header("選択肢")]
     //回答文面の作成
     [SerializeField]
-    private string[] answers = new string[] { "countryside", "Old shrines and temples", "Painting", "I do not feel like that" };
+    private string[] answers = new string[] {
+        "countryside",
+        "Old shrines and temples",
+        "Painting",
+        "I do not feel like that"
+    };
    
     [Header("答え")]
     [SerializeField]
@@ -22,34 +31,22 @@ public class QuizMgr : MonoBehaviour {
     private string next = "Q2";
     [Header("プレイヤーが選択した答え")]
     [SerializeField]
-    static public string selected = "hoge";
+    static public string selected = "";
     //アタッチしたオブジェクトが呼ばれた時に実行される。
     void Start()
     {
+        //初期化
         selected = "";
-        //if (count == 3)
-        //{
-        //    QuestionLabelSet3();
-        //    AnswerLabelSet3();
-        //}
-        //if (count == 2)
-        //{
-        //    QuestionLabelSet2();
-        //    AnswerLabelSet2();
-        //}
-        //if (count == 1)
-        //{
-        //    QuestionLabelSet();
-        //    AnswerLabelSet();
-        //}
+        player = GameObject.Find("Player");
 
     }
 
     void Update()
     {
+
         if (selected == answer)
         {
-            
+            player.transform.position = Vector3.zero;
             SceneManager.LoadScene(next);
         }
         else
