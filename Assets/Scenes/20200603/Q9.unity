@@ -988,18 +988,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 887123708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6223e6426c2b44a88930933f72f5a3e5, type: 3}
+  m_Script: {fileID: 11500000, guid: d653a6e9079c5a04c823f2d06b311611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   quiz: Q1.What makes you feel nostalgic when you look at it?
   answers:
-  - countryside
-  - Old shrines and temples
-  - Painting
-  - I do not feel like that
-  answer: answer1_Door
-  next: Q10
+  - answer1_Door
+  - answer2_Door
+  - answer3_Door
+  - answer4_Door
+  next:
+  - Q10
+  - Q10
+  - Q10
+  - Q10
 --- !u!4 &887123710
 Transform:
   m_ObjectHideFlags: 0
